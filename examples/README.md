@@ -105,8 +105,8 @@ Note that those reports are less restricted, but can take much longer to downloa
 If you're interested in automating a large number of reports, you can speed up the execution by first queueing all
 the reports and only _then_ waiting on the results.
  
-To do so, use `suite.queue_report` instead of `suite.download_report`. This method returns a `Report` object with
-an updated `report.id` field. You can use this number _after_ queuing all reports in `suite.download_report`.
+To do so, use `suite.queue` instead of `suite.download`. This method returns a `Report` object with
+an updated `report.id` field. You can use this number _after_ queuing all reports in `suite.download`.
 
 ## Making other API requests
 If you need to make other API requests you can do so by calling `client.request(api, method, data)` For example if you
